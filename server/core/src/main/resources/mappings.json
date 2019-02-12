@@ -1,0 +1,24 @@
+{
+  "settings": {
+    "analysis": {
+      "normalizer": {
+        "keyword_lowercase": {
+          "type": "custom",
+          "filter": ["lowercase"]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "file": {
+      "properties": {
+        "id": { "type":  "keyword" },
+        "path": { "type":  "keyword" },
+        "name": { "type":  "keyword", "normalizer": "keyword_lowercase" },
+        "type": { "type":  "keyword" },
+        "users": { "type": "keyword" },
+        "extension": { "type":  "keyword" }
+      }
+    }
+  }
+}
